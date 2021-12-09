@@ -14,6 +14,6 @@ def calculate_age(born):
                                                     born.day))
 DB = pydbgen.pydb()
 name_date = DB.gen_dataframe(251, fields=['name','date'])
-date = DB.gen_data_series(251, data_type='date')
+# date = DB.gen_data_series(251, data_type='date')
 name_date['age'] = name_date['date'].apply(calculate_age)
 

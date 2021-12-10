@@ -1,0 +1,175 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "1f9d6c1b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import random\n",
+    "from random import sample\n",
+    "from datetime import date, datetime\n",
+    "from pydbgen import pydbgen\n",
+    "import pandas as pd\n",
+    "import numpy as np \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "b66a10cc",
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (<ipython-input-10-0c7b56867edb>, line 1)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-10-0c7b56867edb>\"\u001b[0;36m, line \u001b[0;32m1\u001b[0m\n\u001b[0;31m    pip install pydbgen\u001b[0m\n\u001b[0m        ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+     ]
+    }
+   ],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "id": "b8bab2f5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[-0.65875939 -0.46241476 -0.29517386 ...  0.83677507 -0.08138061\n",
+      "   0.02893296]\n",
+      " [-0.71113188  0.39130465  0.48040971 ... -0.88776611  0.65393169\n",
+      "   0.25164694]\n",
+      " [ 0.60697681  0.18470279  0.75281537 ...  0.53039226 -0.33162356\n",
+      "   0.32645375]\n",
+      " ...\n",
+      " [ 0.18392669  0.90081609 -0.90149904 ...  0.57972784  0.93988706\n",
+      "   0.32530863]\n",
+      " [ 0.06605179 -0.51111873 -0.89379732 ...  0.57522446 -0.56169871\n",
+      "   0.63787386]\n",
+      " [ 0.8142041   0.33189554 -0.9751289  ...  0.7864442  -0.38570006\n",
+      "  -0.54856991]]\n",
+      "        gene1     gene2     gene3     gene4     gene5     gene6     gene7  \\\n",
+      "0   -0.658759 -0.462415 -0.295174  0.842659  0.362684  0.590655  0.216940   \n",
+      "1   -0.711132  0.391305  0.480410  0.629418  0.341552 -0.986784 -0.064699   \n",
+      "2    0.606977  0.184703  0.752815 -0.056446 -0.121478  0.107327  0.887889   \n",
+      "3    0.161878  0.405104  0.483500  0.094688  0.797565  0.464209 -0.435004   \n",
+      "4    0.822539  0.393883  0.800467 -0.080594 -0.383019  0.249807 -0.329248   \n",
+      "..        ...       ...       ...       ...       ...       ...       ...   \n",
+      "245 -0.455616  0.908224 -0.772903 -0.308454  0.307543  0.671213 -0.919855   \n",
+      "246  0.623061  0.991921  0.176491  0.344465 -0.668631  0.989579  0.993281   \n",
+      "247  0.183927  0.900816 -0.901499  0.907369  0.130010  0.989815  0.360177   \n",
+      "248  0.066052 -0.511119 -0.893797  0.512492  0.102625 -0.165309 -0.703200   \n",
+      "249  0.814204  0.331896 -0.975129 -0.247879 -0.676984  0.965472 -0.129236   \n",
+      "\n",
+      "        gene8     gene9    gene10  \n",
+      "0    0.836775 -0.081381  0.028933  \n",
+      "1   -0.887766  0.653932  0.251647  \n",
+      "2    0.530392 -0.331624  0.326454  \n",
+      "3    0.851592 -0.167886 -0.644086  \n",
+      "4    0.016855 -0.350259 -0.552792  \n",
+      "..        ...       ...       ...  \n",
+      "245 -0.775015 -0.659842 -0.867563  \n",
+      "246  0.287165 -0.633647 -0.288771  \n",
+      "247  0.579728  0.939887  0.325309  \n",
+      "248  0.575224 -0.561699  0.637874  \n",
+      "249  0.786444 -0.385700 -0.548570  \n",
+      "\n",
+      "[250 rows x 10 columns]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Gene Expression Value\n",
+    "gene_df = rd.uniform(-1, 1, (250, 10))\n",
+    "print(gene_df)\n",
+    "\n",
+    "gene_df = pd.DataFrame(gene_df)\n",
+    "gene_df.columns = [\"gene1\", \"gene2\", \"gene3\", \"gene4\", \"gene5\", \n",
+    "                  \"gene6\", \"gene7\", \"gene8\", \"gene9\", \"gene10\", ]\n",
+    "print(gene_df)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 54,
+   "id": "bcf13a42",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "     snp1  snp2  snp3  snp4  snp5\n",
+      "0       0     1     0     2     2\n",
+      "1       1     2     0     1     2\n",
+      "2       1     1     0     0     1\n",
+      "3       2     1     1     1     0\n",
+      "4       0     1     0     2     2\n",
+      "..    ...   ...   ...   ...   ...\n",
+      "245     2     2     1     0     2\n",
+      "246     1     2     2     2     1\n",
+      "247     2     1     1     0     0\n",
+      "248     1     0     0     0     2\n",
+      "249     0     2     2     0     1\n",
+      "\n",
+      "[250 rows x 5 columns]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# SNP values\n",
+    "snp_df = rd.randint(0, 3, (250, 5)) # [0, 3) integer\n",
+    "snp_df = pd.DataFrame(snp_df)\n",
+    "snp_df.columns = [\"snp1\", \"snp2\", \"snp3\", \"snp4\", \"snp5\"]\n",
+    "print(snp_df)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "82ed54a7",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "dd3d4525",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
